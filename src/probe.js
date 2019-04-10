@@ -1,5 +1,5 @@
 const axios = require('axios');
-const dataFile = require('../resources/data.json');
+const dataFile = require('../resources/data.js');
 
 function parseUId(data, key) {
   return data[key].uniqueid.split('-')[0];
