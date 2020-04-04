@@ -2,7 +2,7 @@
 /* eslint-disable comma-dangle */
 /* eslint-disable quotes */
 /* eslint-disable quote-props */
-import test from 'ava';
+const test = require('ava');
 
 const probe = require('../../src/probe');
 const dataFile = require('../resources/sample.json');
