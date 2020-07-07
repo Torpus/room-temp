@@ -30,7 +30,7 @@ function getTemps() {
     const { data } = response;
     const hueSensor = getSensors(data);
     Object.keys(hueSensor).forEach((key) => {
-      tempList[hueSensor[key][0]] = convert(hueSensor[key][1] / 100);
+      tempList[hueSensor[key][0]] = convert(hueSensor[key][1] / 100).toFixed(2);
     });
     return tempList;
   }).catch((error) => {
