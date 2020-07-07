@@ -1,7 +1,9 @@
-const HUE_IP_ADDR = process.env.HUE_IP_ADDR;
-const HUE_API_KEY = process.env.HUE_API_KEY;
-const MQTT_IP_ADDR = process.env.MQTT_IP_ADDR;
-const PROM_IP_ADDR = process.env.PROM_IP_ADDR;
+const {
+  HUE_IP_ADDR,
+  HUE_API_KEY,
+  MQTT_IP_ADDR,
+  PROM_IP_ADDR,
+} = process.env;
 
 module.exports = {
   hueUrl: `http://${HUE_IP_ADDR}/api/${HUE_API_KEY}/sensors`,

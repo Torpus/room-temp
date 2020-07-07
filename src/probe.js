@@ -1,6 +1,6 @@
 const axios = require('axios');
 const dataFile = require('../resources/data.js');
-const convert = require('./convert.js');
+// const convert = require('./convert.js');
 
 function parseUId(data, key) {
   return data[key].uniqueid.split('-')[0];
@@ -30,9 +30,10 @@ function getTemps() {
     const { data } = response;
     const hueSensor = getSensors(data);
     Object.keys(hueSensor).forEach((key) => {
-      let tempC = hueSensor[key][1].toString();
-      tempC = `${tempC.substring(0, 2)}.${tempC.substring(2, 4)}`;
-      tempList[hueSensor[key][0]] = convert(tempC);
+      let tempF = hueSensor[key][1].toString();
+      tempF = `${tempF.substring(0, 2)}.${tempF.substring(2, 4)}`;
+      // tempList[hueSensor[key][0]] = convert(tempC);
+      tempList[hueSensor[key][0]] = tempF;
     });
     return tempList;
   }).catch((error) => {

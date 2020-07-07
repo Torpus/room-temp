@@ -1,9 +1,10 @@
 {
   "name": "room-temp",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple Tool to track the temperatures of my rooms",
   "main": "./src/index.js",
   "scripts": {
+    "dev": "nodemon ./src/index.js",
     "run": "node ./src/index.js",
     "test": "nyc ava"
   },
@@ -21,6 +22,7 @@
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.2",
+    "nodemon": "^2.0.4",
     "nyc": "^15.1.0"
   }
 }
